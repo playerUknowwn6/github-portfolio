@@ -1,0 +1,19 @@
+<html lang="en">
+    <%- include('./partials/head');     %>
+<body>
+
+<%- include('./partials/nav');     %>
+
+<div class="blogs content"></div>
+ <% if(blog.length >0){ %>
+    <% blog.forEach(blog =>{%>
+        <a class="single" href="/blogs/<%= blog._id %>">
+            <h3 class="title"><%= blog.title %></h3>
+            <p class="snippet"><%= blog.snippet %></p>
+        </a>
+    <%})%>
+    <%}%>
+    <%- include('./partials/footer');     %>
+
+</body>
+</html>
