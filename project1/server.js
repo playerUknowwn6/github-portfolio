@@ -11,7 +11,7 @@ const server =http.createServer((req,res)=>{
 
 
    const greet=_.once(()=>{
-    comsole.log('hello');
+    console.log('hello');
 
    });
 
