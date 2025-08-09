@@ -2,12 +2,12 @@ const express =require('express');
 const morgan = require('morgan');
 const mongoose=require('mongoose');
 const { result } = require('lodash');
-
+import { Key } from '../../Web_Dev_Project_Portfolio/Node MONGO DB Blogsite/key';
 const blogRoutes =require('./Routes/BlogRoutes');
 
 
 const app=express();
-const DbURI='mongodb+srv://ansar:Zebra995@nodeansar.u0zknsm.mongodb.net/?retryWrites=true&w=majority&appName=NodeAnsar';
+const DbURI=Key;
 mongoose.connect(DbURI)
 .then((result)=>{
     app.listen(3000); 
